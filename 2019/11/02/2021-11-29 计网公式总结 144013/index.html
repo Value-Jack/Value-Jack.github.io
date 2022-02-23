@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分类, 感而遂通的blog">
+    <meta name="keywords" content="计网公式总结, 感而遂通的blog">
     <meta name="description" content="这个人很懒 但是想留下点东西">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>分类 | 感而遂通的blog</title>
+    <title>计网公式总结 | 感而遂通的blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">categories</h1>
+                    <h1 class="description center-align post-title">计网公式总结</h1>
                 </div>
             </div>
         </div>
@@ -429,9 +429,17 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/408/">
+                                <span class="chip bg-color">408</span>
+                            </a>
+                        
+                            <a href="/tags/%E8%AE%A1%E7%BD%91/">
+                                <span class="chip bg-color">计网</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -443,7 +451,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-11-06
+                    2019-11-02
                 </div>
                 
 
@@ -452,7 +460,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    1.4k
                 </div>
                 
 
@@ -469,7 +477,100 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h3 id="奈奎斯特定理"><a href="#奈奎斯特定理" class="headerlink" title="奈奎斯特定理"></a>奈奎斯特定理</h3><p>$$<br>理想低通道下的极限数据传输率&#x3D;2W\log_2V<br>$$</p>
+<h3 id="香农定理"><a href="#香农定理" class="headerlink" title="香农定理"></a>香农定理</h3><p>$$<br>信道的极限数据传输率&#x3D;Wlog_2(1+S&#x2F;N) (单位为b&#x2F;s)<br>$$</p>
+<p>W：信道的带宽。 S：信道所传输信号的平均功率。 S&#x2F;N：信噪比 </p>
+<p>信噪比&#x3D;10log10(S&#x2F;N) 当S&#x2F;N&#x3D;1000时，信噪比为30dB</p>
+<h3 id="比特率和波特率的转换关系"><a href="#比特率和波特率的转换关系" class="headerlink" title="比特率和波特率的转换关系"></a>比特率和波特率的转换关系</h3><p>$$<br>比特率&#x3D;波特率*log_2n<br>$$</p>
+<p>一个码元含有n个比特的信息量。</p>
+<p>P43 采用8种相位，每种相位各有两种幅度的QAM调制方法，在1200Baud的信号传输速率能为 4800b&#x2F;s。</p>
+<blockquote>
+<p>$log_216&#x3D;4<br>$ </p>
+<p>$数据传输率&#x3D;1200*4&#x3D;4800b&#x2F;s$</p>
+</blockquote>
+<h2 id="计网的基本指标："><a href="#计网的基本指标：" class="headerlink" title="计网的基本指标："></a>计网的基本指标：</h2><ul>
+<li><p>带宽：单位是b&#x2F;s</p>
+</li>
+<li><p>时延</p>
+<p>$整个传输过程的总时延&#x3D;发送时延+传播时延+（处理时延+传播时延 （后面两个一般忽略不计））$</p>
+<p>$发送时延&#x3D;分组帧长&#x2F;信道宽度$</p>
+<p>$传播时延&#x3D;信道长度&#x2F;传播速率$</p>
+<p><strong>ps:信号的传播速率是信号在信道上传播的速率，与信道的发送速率无关。</strong><br><strong>信道表示为端对端的距离，一般单位为km。传播速率单位一般为km&#x2F;s</strong></p>
+<p><strong>信道的数据发送&#x2F;数据传输速率一般为Mb&#x2F;s</strong></p>
+</li>
+<li><p>往返时延RTT<br>这个地方经常有坑，会说单向的传播时间为，需要注意。</p>
+<p>$RTT&#x3D;2*端与端的距离&#x2F;传播速度$ </p>
+</li>
+<li><p>吞吐量。指单位的时间内通过某个网络的数据量.<br>$$<br>吞吐量&#x3D;\frac{有效数据}{发送周期}<br>$$</p>
+</li>
+<li><p>信道利用率：指在整个过程中有多少数据是通过的。即</p>
+<p>$信道利用率&#x3D;(L&#x2F;C)&#x2F;T $ </p>
+<p>L:表示T内发送L比特的数据    C：表示发送方数据传输率<br>T：发送周期，指从开始发送数据，到收到第一个确认帧数为止</p>
+</li>
+</ul>
+<ul>
+<li>最小帧长度&#x3D;数据传输速率*RTT，这里还需要注意一点最小帧长度一般是用B(字节)表示，而数据传输速率往往是用b（比特来表示），转换时别忘记$\times$8</li>
+</ul>
+<h2 id="滑动窗口协议"><a href="#滑动窗口协议" class="headerlink" title="滑动窗口协议"></a>滑动窗口协议</h2><p>​    $发送窗口+接收窗口\leq2^n$</p>
+<ol>
+<li>停等协议：发送窗口&#x3D;1，接受窗口&#x3D;1</li>
+<li>后退N帧协议：发送窗口&gt;1,接收窗口&#x3D;1</li>
+<li>选择重传协议：发送窗口&gt;1,接收窗口&gt;1。一般取发送窗口&#x3D;接收窗口&#x3D;$2^{n-1}$</li>
+</ol>
+<h3 id="停等协议例题："><a href="#停等协议例题：" class="headerlink" title="停等协议例题："></a><strong>停等协议例题：</strong></h3><p>​    一个信道的传播速率为4kb&#x2F;s，单向传播时延为30ms，如果使停等协议的信道利用率达到80%，要求的数据帧长至少为（）</p>
+<blockquote>
+<p>解析：<br>$$<br>80%&#x3D;\frac{L&#x2F;4}{L&#x2F;4+RTT}&#x3D;\frac{L&#x2F;4}{L&#x2F;4+2*30ms}<br>$$<br>解得 L&#x3D;960bit</p>
+</blockquote>
+<h3 id="GBN例题"><a href="#GBN例题" class="headerlink" title="GBN例题"></a><strong>GBN例题</strong></h3><p><img src="C:\Users\李章杰\AppData\Roaming\Typora\typora-user-images\image-20211128192022881.png" alt="image-20211128192022881"></p>
+<blockquote>
+<p>解析：</p>
+<p>捎带确认：不需要考虑传输时延，只需要考虑传播时延</p>
+<p>最大传输率需要考虑信道带宽和GBN协议，</p>
+<p>最大传输率&#x3D;min{信道带宽，根据GBN协议算得的传输率}</p>
+<p>信道带宽&#x3D;100Mb&#x2F;s</p>
+<p>GBN：</p>
+<p>甲的发送窗口尺寸为1000，即最多可发1000*1000B&#x3D;1MB</p>
+<p>$$<br>最大传输率&#x3D;\frac{1MB}{1000B&#x2F;100MB+50ms+50ms}&#x3D;80Mb&#x2F;s<br>$$<br>则选取最小的为80Mb&#x2F;s</p>
+</blockquote>
+<p><strong>ch3 3.4.5</strong><br><img src="C:\Users\李章杰\AppData\Roaming\Typora\typora-user-images\image-20211128192940513.png" alt="image-20211128192940513"></p>
+<blockquote>
+<p>解析：</p>
+<p><strong>停等协议</strong><br>    发一帧，都要应答。需要考虑接收端的传输时延<br>$$<br>最大利用率&#x3D;\frac{传播长度&#x2F;数据传输率}{2<em>单向传播时延+2</em>传播长度&#x2F;数据传输率}<br>\&#x3D;\frac{1k&#x2F;50k}{2<em>270+2</em>1k&#x2F;50k}\&#x3D;\frac{0.02}{0.58}&#x3D;3.4%<br>$$<br><strong>GBN</strong></p>
+<p>发送窗口满足$1&lt;W\leq2^n-1$  则有发送窗口为7，则有在第一帧的数据传输周几内，总共发送了7帧数<br>$$<br>最大利用率&#x3D;\frac{7<em>传播长度&#x2F;数据传输率}{2</em>单向传播时延+2<em>传播长度&#x2F;数据传输率}\&#x3D;7</em>3.4%<br>$$</p>
+<h3 id="选择重传"><a href="#选择重传" class="headerlink" title="选择重传"></a><strong>选择重传</strong></h3><p>发送窗口&#x3D;接收窗口&#x3D;$2^{n-1}&#x3D;4$<br>$$<br>最大利用率&#x3D;4*3.4%&#x3D;13.8%<br>$$</p>
+</blockquote>
+<p>[2017真题]<img src="C:\Users\李章杰\AppData\Roaming\Typora\typora-user-images\image-20211128195043044.png" alt="image-20211128195043044"></p>
+<p><img src="C:\Users\李章杰\AppData\Roaming\Typora\typora-user-images\image-20211128195058752.png" alt="image-20211128195058752"></p>
+<blockquote>
+<p>解析：</p>
+<p>确认序号和发送序号均为3bit，捎带确认，由GBN协议得，发送窗口为$2^{n}-1&#x3D;7$<br>$$<br>最大信道利用率&#x3D;\frac{7<em>单帧发送时延}{单帧发送时延+传播时延}\&#x3D;\frac{7</em>8<em>1000b&#x2F;100Mb&#x2F;s}{0.96</em>10^{-3}+2<em>8</em>1000b&#x2F;100Mb}\&#x3D;50%<br>$$<br><strong>很经典的题目</strong></p>
+</blockquote>
+<p><strong>距离变化</strong></p>
+<p><img src="C:\Users\李章杰\AppData\Roaming\Typora\typora-user-images\image-20211128200615636.png" alt="image-20211128200615636"></p>
+<blockquote>
+<p>$$<br>最小帧长度&#x3D;数据传输速率<em>RTT &#x3D;数据传输速度</em>2*端与端的距离&#x2F;传播速度<br>$$</p>
+<p>$$<br>\Delta l&#x3D;数据传输速度<em>2</em>\Delta s&#x2F;传播速度&#x3D;80m<br>$$</p>
+<p>最小帧长度和距离是成正比的关系，只要把公式写清楚就很容易得到答案为D选项。</p>
+<p>补充：<strong>以太网最小数据帧为64B，数据长度为46-1500B，即IP数据报小于46B时需要填充</strong></p>
+<p>详见【2012年真题】<img src="C:\Users\李章杰\AppData\Roaming\Typora\typora-user-images\image-20211129140255618.png" alt="image-20211129140255618"><br>最后是3,5号分组总长度为40（28H)字节小于46字节，说明需要填充</p>
+</blockquote>
+<h3 id="吞吐率-x2F-吞吐量"><a href="#吞吐率-x2F-吞吐量" class="headerlink" title="吞吐率&#x2F;吞吐量"></a>吞吐率&#x2F;吞吐量</h3><p>P82 <img src="C:\Users\李章杰\AppData\Roaming\Typora\typora-user-images\image-20211129142220989.png" alt="image-20211129142220989"></p>
+<blockquote>
+<p>一个发送周期的时间为$512B<em>8&#x2F;(64kb&#x2F;s)+2</em>270ms&#x3D;0.604s$ </p>
+<p>吞吐量&#x2F;吞吐率&lt;&#x3D;数据发送速率</p>
+<ul>
+<li>发送窗口尺寸为1时，吞吐率为1x512Bx8&#x2F;0.604s&#x3D;6.8kb&#x2F;s </li>
+<li>发送窗口尺寸为7时，吞吐率为7x512Bx8&#x2F;0.604s&#x3D;47.56kb&#x2F;s</li>
+<li>发送窗口尺寸为17时，<strong>注意</strong>当发送窗口大于0.604&#x2F;0.064即$\geq$10,发送窗口能保证连续发送，此时吞吐率&#x3D;64kb&#x2F;s</li>
+</ul>
+</blockquote>
+<p>P234</p>
+<p><img src="C:\Users\李章杰\AppData\Roaming\Typora\typora-user-images\image-20211129143809736.png" alt="image-20211129143809736"></p>
+<blockquote>
+<p>这里提到了带宽，需要注意吞吐量$\leq$带宽。</p>
+<p>RTT&#x3D;40ms 则<br>$$<br>吞吐率&#x3D;<br>$$</p>
+</blockquote>
+
                 
             </div>
             <hr/>
@@ -495,7 +596,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/categories/index.html">http://yoursite.com/categories/index.html</a>
+                    <a href="http://yoursite.com/2019/11/02/2021-11-29%20%E8%AE%A1%E7%BD%91%E5%85%AC%E5%BC%8F%E6%80%BB%E7%BB%93%20144013/">http://yoursite.com/2019/11/02/2021-11-29%20%E8%AE%A1%E7%BD%91%E5%85%AC%E5%BC%8F%E6%80%BB%E7%BB%93%20144013/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -532,7 +633,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/408/">
+                                    <span class="chip bg-color">408</span>
+                                </a>
+                            
+                                <a href="/tags/%E8%AE%A1%E7%BD%91/">
+                                    <span class="chip bg-color">计网</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -700,18 +809,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/categories/index.html">
+                <a href="/2019/11/02/%E6%A0%91/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="categories">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="树">
                         
-                        <span class="card-title">categories</span>
+                        <span class="card-title">树</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -721,9 +829,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-06
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-11-02
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -732,7 +840,14 @@
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/LeetCode/">
+                        <span class="chip bg-color">LeetCode</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -740,16 +855,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/categories/index.html">
+                <a href="/2019/11/02/%E5%85%AC%E5%BC%8F%E6%80%BB%E7%BB%93/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="categories">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="公式总结">
                         
-                        <span class="card-title">categories</span>
+                        <span class="card-title">公式总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -760,7 +875,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-06
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-02
                             </span>
                         <span class="publish-author">
                             
@@ -770,7 +885,14 @@
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/408/">
+                        <span class="chip bg-color">408</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
