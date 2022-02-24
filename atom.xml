@@ -29,7 +29,7 @@
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
         
       
     
@@ -39,11 +39,11 @@
   </entry>
   
   <entry>
-    <title>C++基础</title>
+    <title>cpp基础</title>
     <link href="https://Value-Jack.github.io/2022/02/23/c-ji-chu/"/>
     <id>https://Value-Jack.github.io/2022/02/23/c-ji-chu/</id>
     <published>2022-02-23T06:42:31.000Z</published>
-    <updated>2022-02-23T06:44:22.678Z</updated>
+    <updated>2022-02-23T15:22:17.166Z</updated>
     
     <summary type="html">
     
@@ -51,7 +51,7 @@
       
         
         
-          &lt;h1 id=&quot;C-基础&quot;&gt;&lt;a href=&quot;#C-基础&quot; class=&quot;headerlink&quot; title=&quot;C++基础&quot;&gt;&lt;/a&gt;C++基础&lt;/h1&gt;&lt;h2 id=&quot;基本语法&quot;&gt;&lt;a href=&quot;#基本语法&quot; class=&quot;headerlink&quot;
+          &lt;h1 id=&quot;cpp基础&quot;&gt;&lt;a href=&quot;#cpp基础&quot; class=&quot;headerlink&quot; title=&quot;cpp基础&quot;&gt;&lt;/a&gt;cpp基础&lt;/h1&gt;&lt;h2 id=&quot;基本语法&quot;&gt;&lt;a href=&quot;#基本语法&quot; class=&quot;headerlink&quot;
         
       
     
@@ -60,7 +60,7 @@
     
       <category term="LeetCode" scheme="https://Value-Jack.github.io/tags/LeetCode/"/>
     
-      <category term="c++" scheme="https://Value-Jack.github.io/tags/c/"/>
+      <category term="cpp" scheme="https://Value-Jack.github.io/tags/cpp/"/>
     
   </entry>
   
@@ -93,7 +93,7 @@
     <link href="https://Value-Jack.github.io/2021/02/23/shu-zu-ru-men/"/>
     <id>https://Value-Jack.github.io/2021/02/23/shu-zu-ru-men/</id>
     <published>2021-02-23T01:35:51.000Z</published>
-    <updated>2022-02-23T03:26:35.496Z</updated>
+    <updated>2022-02-23T15:23:59.287Z</updated>
     
     <summary type="html">
     
@@ -108,10 +108,10 @@
   
   <entry>
     <title>计网公式总结</title>
-    <link href="https://Value-Jack.github.io/2019/11/02/2021-11-29-ji-wang-gong-shi-zong-jie-144013/"/>
-    <id>https://Value-Jack.github.io/2019/11/02/2021-11-29-ji-wang-gong-shi-zong-jie-144013/</id>
-    <published>2019-11-02T12:57:06.000Z</published>
-    <updated>2022-02-23T03:52:20.639Z</updated>
+    <link href="https://Value-Jack.github.io/2020/01/14/2021-11-29-ji-wang-gong-shi-zong-jie-144013/"/>
+    <id>https://Value-Jack.github.io/2020/01/14/2021-11-29-ji-wang-gong-shi-zong-jie-144013/</id>
+    <published>2020-01-14T07:27:31.000Z</published>
+    <updated>2022-02-24T11:03:26.785Z</updated>
     
     <summary type="html">
     
@@ -119,12 +119,14 @@
       
         
         
-          &lt;h3 id=&quot;奈奎斯特定理&quot;&gt;&lt;a href=&quot;#奈奎斯特定理&quot; class=&quot;headerlink&quot; title=&quot;奈奎斯特定理&quot;&gt;&lt;/a&gt;奈奎斯特定理&lt;/h3&gt;&lt;p&gt;$$&lt;br&gt;理想低通道下的极限数据传输率&amp;#x3D;2W\log_2V&lt;br&gt;$$&lt;/p&gt;
+          &lt;h3 id=&quot;奈奎斯特定理&quot;&gt;&lt;a href=&quot;#奈奎斯特定理&quot; class=&quot;headerlink&quot; title=&quot;奈奎斯特定理&quot;&gt;&lt;/a&gt;奈奎斯特定理&lt;/h3&gt;&lt;p&gt;$$&lt;br&gt;理想低通道下的极限数据传输率=2W\log_2V&lt;br&gt;$$&lt;/p&gt;
 &lt;h3
         
       
     
     </summary>
+    
+      <category term="笔记" scheme="https://Value-Jack.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="408" scheme="https://Value-Jack.github.io/tags/408/"/>
@@ -189,7 +191,7 @@
     <link href="https://Value-Jack.github.io/2019/11/02/shu/"/>
     <id>https://Value-Jack.github.io/2019/11/02/shu/</id>
     <published>2019-11-02T12:57:06.000Z</published>
-    <updated>2022-02-23T03:48:57.110Z</updated>
+    <updated>2022-02-23T15:24:36.089Z</updated>
     
     <summary type="html">
     
