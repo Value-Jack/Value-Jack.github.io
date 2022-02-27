@@ -8,10 +8,10 @@
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="哈希表基本知识点参考c++基础
+    <meta name="description" content="哈希表基本知识点参考基础
 总结一下，当我们遇到了要快速判断一个元素是否出现集合里的时候，就要考虑哈希法。
 但是哈希法也是牺牲了空间换取了时间，因为我们要使用额外的数组，set或者是map来存放数据，才能实现快速的查找。
-242. 有效">
+242. 有效的字母">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -332,7 +332,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -478,14 +478,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    510
+                    5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    21 分
                 </div>
                 
                 
@@ -501,19 +501,19 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h1><h3 id="基本知识点"><a href="#基本知识点" class="headerlink" title="基本知识点"></a>基本知识点</h3><p>参考c++基础</p>
+                <h1 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h1><h3 id="基本知识点"><a href="#基本知识点" class="headerlink" title="基本知识点"></a>基本知识点</h3><p>参考基础</p>
 <p>总结一下，<strong>当我们遇到了要快速判断一个元素是否出现集合里的时候，就要考虑哈希法</strong>。</p>
 <p>但是哈希法也是<strong>牺牲了空间换取了时间</strong>，因为我们要使用额外的数组，set或者是map来存放数据，才能实现快速的查找。</p>
 <h3 id="242-有效的字母异位词"><a href="#242-有效的字母异位词" class="headerlink" title="242. 有效的字母异位词"></a><a href="https://leetcode-cn.com/problems/valid-anagram/" target="_blank" rel="noopener">242. 有效的字母异位词</a></h3><p>给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。</p>
 <p>注意：若 s 和 t 中每个字符出现的次数都相同，则称 s 和 t 互为字母异位词。</p>
 <h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>因为要统计出现的次数，所以使用unordered_map统计key，然后 value,然后再两个map遍历比较，看看是否全部相等。</p>
-<h4 id="两个哈希表-比较"><a href="#两个哈希表-比较" class="headerlink" title="两个哈希表 比较"></a>两个哈希表 比较</h4><pre class="line-numbers language-c++"><code class="language-c++">class Solution {
+<h4 id="两个哈希表-比较"><a href="#两个哈希表-比较" class="headerlink" title="两个哈希表 比较"></a>两个哈希表 比较</h4><pre><code>class Solution {
 public:
     bool isAnagram(string s, string t) {
-        unordered_map<char,int> maps,mapt;
+        unordered_map&lt;char,int&gt; maps,mapt;
         if(s.size()!=t.size())
         return false;
-        for(int i=0;i<s.size();i++)
+        for(int i=0;i&lt;s.size();i++)
         {
             maps[s[i]]++;
             mapt[t[i]]++;//统计出现的次数
@@ -526,15 +526,14 @@ public:
         }
         return true;
     }
-};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="349-两个数组的交集"><a href="#349-两个数组的交集" class="headerlink" title="349. 两个数组的交集"></a><a href="https://leetcode-cn.com/problems/intersection-of-two-arrays/" target="_blank" rel="noopener">349. 两个数组的交集</a></h3><p> 给定两个数组 <code>nums1</code> 和 <code>nums2</code> ，返回 <em>它们的交集</em> 。输出结果中的每个元素一定是 <strong>唯一</strong> 的。我们可以 <strong>不考虑输出结果的顺序</strong> 。 </p>
-<p>![1643458699610](C:\Users\DELL\Desktop\LeetCode\字符串 哈希表.assets\1643458699610.png)</p>
+};</code></pre><h3 id="349-两个数组的交集"><a href="#349-两个数组的交集" class="headerlink" title="349. 两个数组的交集"></a><a href="https://leetcode-cn.com/problems/intersection-of-two-arrays/" target="_blank" rel="noopener">349. 两个数组的交集</a></h3><p> 给定两个数组 <code>nums1</code> 和 <code>nums2</code> ，返回 <em>它们的交集</em> 。输出结果中的每个元素一定是 <strong>唯一</strong> 的。我们可以 <strong>不考虑输出结果的顺序</strong> 。 </p>
+<p><img src="https://lzjtypora.oss-cn-beijing.aliyuncs.com/imgtypora/202202251510795.png" alt="1643458699610"></p>
 <h4 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h4><p>哈希表</p>
-<h4 id="哈希表-1"><a href="#哈希表-1" class="headerlink" title="哈希表"></a>哈希表</h4><pre class="line-numbers language-c++"><code class="language-c++">class Solution {
+<h4 id="哈希表-1"><a href="#哈希表-1" class="headerlink" title="哈希表"></a>哈希表</h4><pre><code>class Solution {
 public:
-    vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
-        vector<int> res,num;
-        unordered_set<int> set1,set2;
+    vector&lt;int&gt; intersection(vector&lt;int&gt;&amp; nums1, vector&lt;int&gt;&amp; nums2) {
+        vector&lt;int&gt; res,num;
+        unordered_set&lt;int&gt; set1,set2;
         for(auto p:nums1)
         set1.insert(p);
 
@@ -549,26 +548,24 @@ public:
 
         return res;//这里也可以直接定义一个哈希表
     }
-};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="代码随想录"><a href="#代码随想录" class="headerlink" title="代码随想录"></a>代码随想录</h4><p>这里注意一下好像是直接把res转换为了vector<int>,这个技巧可以学一学，没必要再建一个容器了</int></p>
-<pre class="line-numbers language-c++"><code class="language-c++">class Solution {
+};</code></pre><h4 id="代码随想录"><a href="#代码随想录" class="headerlink" title="代码随想录"></a>代码随想录</h4><p>这里注意一下好像是直接把res转换为了vector<int>,这个技巧可以学一学，没必要再建一个容器了</int></p>
+<pre><code>class Solution {
 public:
-    vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
-        unordered_set<int> result_set; // 存放结果
-        unordered_set<int> nums_set(nums1.begin(), nums1.end());
+    vector&lt;int&gt; intersection(vector&lt;int&gt;&amp; nums1, vector&lt;int&gt;&amp; nums2) {
+        unordered_set&lt;int&gt; result_set; // 存放结果
+        unordered_set&lt;int&gt; nums_set(nums1.begin(), nums1.end());
         for (int num : nums2) {
             // 发现nums2的元素 在nums_set里又出现过
             if (nums_set.find(num) != nums_set.end()) {
                 result_set.insert(num);
             }
         }
-        return vector<int>(result_set.begin(), result_set.end());//这一步挺不错的
+        return vector&lt;int&gt;(result_set.begin(), result_set.end());//这一步挺不错的
     }
-};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="202-快乐数"><a href="#202-快乐数" class="headerlink" title="202. 快乐数"></a><a href="https://leetcode-cn.com/problems/happy-number/" target="_blank" rel="noopener">202. 快乐数</a></h3><p>编写一个算法来判断一个数 n 是不是快乐数。</p>
+};</code></pre><h3 id="202-快乐数"><a href="#202-快乐数" class="headerlink" title="202. 快乐数"></a><a href="https://leetcode-cn.com/problems/happy-number/" target="_blank" rel="noopener">202. 快乐数</a></h3><p>编写一个算法来判断一个数 n 是不是快乐数。</p>
 <p>「快乐数」 定义为：</p>
 <p>对于一个正整数，每一次将该数替换为它每个位置上的数字的平方和。<br>然后重复这个过程直到这个数变为 1，也可能是 无限循环 但始终变不到 1。<br>如果这个过程 结果为 1，那么这个数就是快乐数。<br>如果 n 是 快乐数 就返回 true ；不是，则返回 false </p>
-<p>![1643459096125](C:\Users\DELL\Desktop\LeetCode\字符串 哈希表.assets\1643459096125.png)</p>
+<p><img src="https://lzjtypora.oss-cn-beijing.aliyuncs.com/imgtypora/202202251510796.png" alt="1643459096125"></p>
 <h4 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h4><p>这道题目看上去貌似一道数学问题，其实并不是！</p>
 <p>题目中说了会 <strong>无限循环</strong>，那么也就是说<strong>求和的过程中，sum会重复出现，这对解题很重要！</strong></p>
 <p>正如：<a href="https://programmercarl.com/哈希表理论基础.html" target="_blank" rel="noopener">关于哈希表，你该了解这些！ (opens new window)</a>中所说，<strong>当我们遇到了要快速判断一个元素是否出现集合里的时候，就要考虑哈希法了。</strong></p>
@@ -576,7 +573,7 @@ public:
 <p>判断sum是否重复出现就可以使用unordered_set。</p>
 <p><strong>还有一个难点就是求和的过程，如果对取数值各个位上的单数操作不熟悉的话，做这道题也会比较艰难。</strong></p>
 <p> 所以这道题目使用哈希法，来判断这个sum是否重复出现，如果重复了就是return false， 否则一直找到sum为1为止。 </p>
-<h4 id="哈希表-2"><a href="#哈希表-2" class="headerlink" title="哈希表"></a>哈希表</h4><pre class="line-numbers language-c++"><code class="language-c++">class Solution {
+<h4 id="哈希表-2"><a href="#哈希表-2" class="headerlink" title="哈希表"></a>哈希表</h4><pre><code>class Solution {
 public:
     int getsum(int n)
     {
@@ -591,7 +588,7 @@ public:
     }
 
     bool isHappy(int n) {
-        unordered_set<int> set;
+        unordered_set&lt;int&gt; set;
         while(1){
             int sum=getsum(n);
 
@@ -606,14 +603,13 @@ public:
             n=sum;
         }
     }
-};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="1-两数之和"><a href="#1-两数之和" class="headerlink" title="1. 两数之和"></a><a href="https://leetcode-cn.com/problems/two-sum/" target="_blank" rel="noopener">1. 两数之和</a></h3><p>梦开始的地方</p>
-<pre class="line-numbers language-c++"><code class="language-c++">class Solution {
+};</code></pre><h3 id="1-两数之和"><a href="#1-两数之和" class="headerlink" title="1. 两数之和"></a><a href="https://leetcode-cn.com/problems/two-sum/" target="_blank" rel="noopener">1. 两数之和</a></h3><p>梦开始的地方</p>
+<pre><code>class Solution {
 public:
-    vector<int> twoSum(vector<int>& nums, int target) {
-        unordered_map<int,int> map;
+    vector&lt;int&gt; twoSum(vector&lt;int&gt;&amp; nums, int target) {
+        unordered_map&lt;int,int&gt; map;
         int size=nums.size();
-        for(int i=0;i<size;i++)
+        for(int i=0;i&lt;size;i++)
         {
             if(map.find(target-nums[i])==map.end())//9-2=7 如果7没有找到的话
             map[nums[i]]=i;//key是对应的值，value是对应的下标
@@ -622,8 +618,7 @@ public:
         }
         return{};
     }
-};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="454-四数相加-II-mid"><a href="#454-四数相加-II-mid" class="headerlink" title="454. 四数相加 II(mid)"></a><a href="https://leetcode-cn.com/problems/4sum-ii/" target="_blank" rel="noopener">454. 四数相加 II</a>(mid)</h3><p>给你四个整数数组 nums1、nums2、nums3 和 nums4 ，数组长度都是 n ，请你计算有多少个元组 (i, j, k, l) 能满足：</p>
+};</code></pre><h3 id="454-四数相加-II-mid"><a href="#454-四数相加-II-mid" class="headerlink" title="454. 四数相加 II(mid)"></a><a href="https://leetcode-cn.com/problems/4sum-ii/" target="_blank" rel="noopener">454. 四数相加 II</a>(mid)</h3><p>给你四个整数数组 nums1、nums2、nums3 和 nums4 ，数组长度都是 n ，请你计算有多少个元组 (i, j, k, l) 能满足：</p>
 <p>0 &lt;= i, j, k, l &lt; n<br>nums1[i] + nums2[j] + nums3[k] + nums4[l] == 0</p>
 <h4 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h4><p>暴力破解</p>
 <p>哈希表：其实有点像是两数之和，只不过是把target变成了0，把四数之和变成了两个（两数）之和</p>
@@ -634,10 +629,10 @@ public:
 <li>在遍历大C和大D数组，找到如果 0-(c+d) 在map中出现过的话，就用count把map中key对应的value也就是出现次数统计出来。</li>
 <li>最后返回统计值 count 就可以了</li>
 </ol>
-<h4 id="哈希表-3"><a href="#哈希表-3" class="headerlink" title="哈希表"></a>哈希表</h4><pre class="line-numbers language-c++"><code class="language-c++">class Solution {
+<h4 id="哈希表-3"><a href="#哈希表-3" class="headerlink" title="哈希表"></a>哈希表</h4><pre><code>class Solution {
 public:
-    int fourSumCount(vector<int>& nums1, vector<int>& nums2, vector<int>& nums3, vector<int>& nums4) {
-        unordered_map<int,int>map;
+    int fourSumCount(vector&lt;int&gt;&amp; nums1, vector&lt;int&gt;&amp; nums2, vector&lt;int&gt;&amp; nums3, vector&lt;int&gt;&amp; nums4) {
+        unordered_map&lt;int,int&gt;map;
         for(auto i:nums1)
             for(auto j:nums2)
             map[i+j]++;//i+j的key代表ab两数之和 value 代表
@@ -649,16 +644,15 @@ public:
         return count; 
 
     }
-};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="383-赎金信"><a href="#383-赎金信" class="headerlink" title="383. 赎金信"></a><a href="https://leetcode-cn.com/problems/ransom-note/" target="_blank" rel="noopener">383. 赎金信</a></h3><p>给你两个字符串：ransomNote 和 magazine ，判断 ransomNote 能不能由 magazine 里面的字符构成。</p>
+};</code></pre><h3 id="383-赎金信"><a href="#383-赎金信" class="headerlink" title="383. 赎金信"></a><a href="https://leetcode-cn.com/problems/ransom-note/" target="_blank" rel="noopener">383. 赎金信</a></h3><p>给你两个字符串：ransomNote 和 magazine ，判断 ransomNote 能不能由 magazine 里面的字符构成。</p>
 <p>如果可以，返回 true ；否则返回 false 。</p>
 <p>magazine 中的每个字符只能在 ransomNote 中使用一次。</p>
 <h4 id="思路-4"><a href="#思路-4" class="headerlink" title="思路"></a>思路</h4><p>构造哈希表，找得到且value&gt;0的时候就return true 否则return false</p>
 <h4 id="哈希表-4"><a href="#哈希表-4" class="headerlink" title="哈希表"></a>哈希表</h4><p>不难</p>
-<pre class="line-numbers language-c++"><code class="language-c++">class Solution {
+<pre><code>class Solution {
 public:
     bool canConstruct(string ransomNote, string magazine) {
-        unordered_map<char,int>map;
+        unordered_map&lt;char,int&gt;map;
         for(auto c:magazine)
         {
             map[c]++;
@@ -672,69 +666,66 @@ public:
         }
         return true;
     }
-};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h4><p>涉及到单个数字或者单个字母的时候用数组的时间空间复杂度都会更好一点， <strong>因为map要维护红黑树或者哈希表，而且还要做哈希函数，是费时的！数据量大的话就能体现出来差别了。 所以数组更加简单直接有效！</strong> ，但如果是涉及到<strong>字符串，或者多个数字</strong>比如说92,322，这种的话那还是建议使用哈希表</p>
-<pre class="line-numbers language-c++"><code class="language-c++">// 时间复杂度: O(n)
+};</code></pre><h4 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h4><p>涉及到单个数字或者单个字母的时候用数组的时间空间复杂度都会更好一点， <strong>因为map要维护红黑树或者哈希表，而且还要做哈希函数，是费时的！数据量大的话就能体现出来差别了。 所以数组更加简单直接有效！</strong> ，但如果是涉及到<strong>字符串，或者多个数字</strong>比如说92,322，这种的话那还是建议使用哈希表</p>
+<pre><code>// 时间复杂度: O(n)
 // 空间复杂度：O(1)
 class Solution {
 public:
     bool canConstruct(string ransomNote, string magazine) {
         int record[26] = {0};
-        for (int i = 0; i < magazine.length(); i++) {
+        for (int i = 0; i &lt; magazine.length(); i++) {
             // 通过recode数据记录 magazine里各个字符出现次数
-            record[magazine[i]-'a'] ++;
+            record[magazine[i]-&#39;a&#39;] ++;
         }
-        for (int j = 0; j < ransomNote.length(); j++) {
+        for (int j = 0; j &lt; ransomNote.length(); j++) {
             // 遍历ransomNote，在record里对应的字符个数做--操作
-            record[ransomNote[j]-'a']--;
+            record[ransomNote[j]-&#39;a&#39;]--;
             // 如果小于零说明ransomNote里出现的字符，magazine没有
-            if(record[ransomNote[j]-'a'] < 0) {
+            if(record[ransomNote[j]-&#39;a&#39;] &lt; 0) {
                 return false;
             }
         }
         return true;
     }
-};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-c++"><code class="language-c++">class Solution {
+};</code></pre><pre><code>class Solution {
 public:
     bool canConstruct(string ransomNote, string magazine) {
         int num[26]={0};
         for(auto c:magazine)
         {
-            num[c-'a']++;
+            num[c-&#39;a&#39;]++;
         }
         for(auto c:ransomNote)
         {
-            num[c-'a']--;
-            if(num[c-'a']<0)
+            num[c-&#39;a&#39;]--;
+            if(num[c-&#39;a&#39;]&lt;0)
             return false;
         }
         return true;
     }
-};//auto 还是快啊<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="15-三数之和-mid"><a href="#15-三数之和-mid" class="headerlink" title="15. 三数之和(mid)"></a><a href="https://leetcode-cn.com/problems/3sum/" target="_blank" rel="noopener">15. 三数之和</a>(mid)</h3><p>给你一个由 n 个整数组成的数组 nums ，和一个目标值 target 。请你找出并返回满足下述全部条件且不重复的四元组 [nums[a], nums[b], nums[c], nums[d]] （若两个四元组元素一一对应，则认为两个四元组重复）：</p>
+};//auto 还是快啊</code></pre><h3 id="15-三数之和-mid"><a href="#15-三数之和-mid" class="headerlink" title="15. 三数之和(mid)"></a><a href="https://leetcode-cn.com/problems/3sum/" target="_blank" rel="noopener">15. 三数之和</a>(mid)</h3><p>给你一个由 n 个整数组成的数组 nums ，和一个目标值 target 。请你找出并返回满足下述全部条件且不重复的四元组 [nums[a], nums[b], nums[c], nums[d]] （若两个四元组元素一一对应，则认为两个四元组重复）：</p>
 <p>0 &lt;= a, b, c, d &lt; n<br>a、b、c 和 d 互不相同<br>nums[a] + nums[b] + nums[c] + nums[d] == target<br>你可以按 任意顺序 返回答案 </p>
 <h4 id="思路-5"><a href="#思路-5" class="headerlink" title="思路"></a>思路</h4><h4 id="哈希表法"><a href="#哈希表法" class="headerlink" title="哈希表法"></a>哈希表法</h4><p>这道题目如果是用哈希表的话里面注意的细节会比较多所以其实更加建议使用双指针法去做。</p>
-<pre class="line-numbers language-c++"><code class="language-c++">class Solution {
+<pre><code>class Solution {
 public:
-    vector<vector<int>> threeSum(vector<int>& nums) {
-        vector<vector<int>> result;
+    vector&lt;vector&lt;int&gt;&gt; threeSum(vector&lt;int&gt;&amp; nums) {
+        vector&lt;vector&lt;int&gt;&gt; result;
         sort(nums.begin(), nums.end());
         // 找出a + b + c = 0
         // a = nums[i], b = nums[j], c = -(a + b)
-        for (int i = 0; i < nums.size(); i++) {
+        for (int i = 0; i &lt; nums.size(); i++) {
             // 排序之后如果第一个元素已经大于零，那么不可能凑成三元组
-            if (nums[i] > 0) {
+            if (nums[i] &gt; 0) {
                 break;
             }
-            if (i > 0 && nums[i] == nums[i - 1]) { //三元组元素a去重
+            if (i &gt; 0 &amp;&amp; nums[i] == nums[i - 1]) { //三元组元素a去重
                 continue;
             }
-            unordered_set<int> set;
-            for (int j = i + 1; j < nums.size(); j++) {
-                if (j > i + 2
-                        && nums[j] == nums[j-1]
-                        && nums[j-1] == nums[j-2]) { // 三元组元素b去重
+            unordered_set&lt;int&gt; set;
+            for (int j = i + 1; j &lt; nums.size(); j++) {
+                if (j &gt; i + 2
+                        &amp;&amp; nums[j] == nums[j-1]
+                        &amp;&amp; nums[j-1] == nums[j-2]) { // 三元组元素b去重
                     continue;
                 }
                 int c = 0 - (nums[i] + nums[j]);
@@ -748,8 +739,7 @@ public:
         }
         return result;
     }
-};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p> <strong>双指针法将时间复杂度：$O(n^2)$的解法优化为 $O(n)$的解法。也就是降一个数量级，题目如下：</strong> </p>
+};</code></pre><p> <strong>双指针法将时间复杂度：$O(n^2)$的解法优化为 $O(n)$的解法。也就是降一个数量级，题目如下：</strong> </p>
 <ul>
 <li><a href="https://programmercarl.com/0027.移除元素.html" target="_blank" rel="noopener">27.移除元素(opens new window)</a></li>
 <li><a href="https://programmercarl.com/0015.三数之和.html" target="_blank" rel="noopener">15.三数之和(opens new window)</a></li>
@@ -764,39 +754,38 @@ public:
 </ul>
 <h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><h3 id="基本知识"><a href="#基本知识" class="headerlink" title="基本知识"></a>基本知识</h3><h3 id="344-反转字符串"><a href="#344-反转字符串" class="headerlink" title="344. 反转字符串"></a><a href="https://leetcode-cn.com/problems/reverse-string/" target="_blank" rel="noopener">344. 反转字符串</a></h3><p>编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 s 的形式给出。</p>
 <p>不要给另外的数组分配额外的空间，你必须原地修改输入数组、使用 O(1) 的额外空间解决这一问题。</p>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-c++"><code class="language-c++">class Solution {
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre><code>class Solution {
 public:
-    void reverseString(vector<char>& s) {
-        for(int i=0;i<s.size()/2;i++)
+    void reverseString(vector&lt;char&gt;&amp; s) {
+        for(int i=0;i&lt;s.size()/2;i++)
         {
             swap(s[i],s[s.size()-i-1]);
         }
     }
-};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="541-反转字符串-II"><a href="#541-反转字符串-II" class="headerlink" title="541. 反转字符串 II"></a><a href="https://leetcode-cn.com/problems/reverse-string-ii/" target="_blank" rel="noopener">541. 反转字符串 II</a></h3><p>给定一个字符串 s 和一个整数 k，从字符串开头算起，每计数至 2k 个字符，就反转这 2k 字符中的前 k 个字符。</p>
+};</code></pre><h3 id="541-反转字符串-II"><a href="#541-反转字符串-II" class="headerlink" title="541. 反转字符串 II"></a><a href="https://leetcode-cn.com/problems/reverse-string-ii/" target="_blank" rel="noopener">541. 反转字符串 II</a></h3><p>给定一个字符串 s 和一个整数 k，从字符串开头算起，每计数至 2k 个字符，就反转这 2k 字符中的前 k 个字符。</p>
 <p>如果剩余字符少于 k 个，则将剩余字符全部反转。<br>如果剩余字符小于 2k 但大于或等于 k 个，则反转前 k 个字符，其余字符保持原样。</p>
 <h4 id="思路-6"><a href="#思路-6" class="headerlink" title="思路"></a>思路</h4><p>s<strong>wap部分没有处理好 导致花了很多不必要的时间</strong>，这里其实是没有整清楚里面到底是谁和谁换 其实是s[left+i]和s[left+k-1-i]去进行替换</p>
-<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-c++"><code class="language-c++">class Solution {
+<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><pre><code>class Solution {
 public:
-    string reverse(string &s,int k,int left)
+    string reverse(string &amp;s,int k,int left)
     {
 
         int right=s.length();//右边界
-        if(right<left) return nullptr;
+        if(right&lt;left) return nullptr;
 
         //剩余字符大于2k个
-        while(right-left>=2*k)
+        while(right-left&gt;=2*k)
         {
-            for(int i=0;i<k/2;i++)
+            for(int i=0;i&lt;k/2;i++)
             {
                 swap(s[left+i],s[left+k-1-i]);
             }
             left=left+2*k;
         }
 
-        if(right-left<2*k&&right-left>=k) //剩余字符小于 2k 但大于或等于 k 个，则反转前 k 个字符，其余字符保持原样。
+        if(right-left&lt;2*k&amp;&amp;right-left&gt;=k) //剩余字符小于 2k 但大于或等于 k 个，则反转前 k 个字符，其余字符保持原样。
                 {
-                     for(int i=0;i<k/2;i++)
+                     for(int i=0;i&lt;k/2;i++)
                     {
                         swap(s[left+i],s[left+k-1-i]);
                     }
@@ -806,10 +795,10 @@ public:
                 }
 
         //剩余字符小于k个全部翻转
-        if(right-left<k)
+        if(right-left&lt;k)
         {
 
-            for(int i=left;i<(right+left)/2;i++)
+            for(int i=left;i&lt;(right+left)/2;i++)
             swap(s[i],s[right+left-i-1]);
 
             return s;
@@ -825,25 +814,23 @@ public:
 
         return reverse(s,k,0);
     }
-};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-c++"><code class="language-c++">// 反转字符串s中左闭又闭的区间[start, end]
-void reverse(string& s, int start, int end) {
-    for (int i = start, j = end; i < j; i++, j--) {
+};</code></pre><pre><code>// 反转字符串s中左闭又闭的区间[start, end]
+void reverse(string&amp; s, int start, int end) {
+    for (int i = start, j = end; i &lt; j; i++, j--) {
         swap(s[i], s[j]);
     }
-}//这一部分的代码真的很惊艳，太妙了<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="代码随想录-1"><a href="#代码随想录-1" class="headerlink" title="代码随想录"></a>代码随想录</h4><pre class="line-numbers language-c++"><code class="language-c++">class Solution {
+}//这一部分的代码真的很惊艳，太妙了</code></pre><h4 id="代码随想录-1"><a href="#代码随想录-1" class="headerlink" title="代码随想录"></a>代码随想录</h4><pre><code>class Solution {
 public:
-    void reverse(string& s, int start, int end) {
-        for (int i = start, j = end; i < j; i++, j--) {
+    void reverse(string&amp; s, int start, int end) {
+        for (int i = start, j = end; i &lt; j; i++, j--) {
             swap(s[i], s[j]);
         }
     }
     string reverseStr(string s, int k) {
-        for (int i = 0; i < s.size(); i += (2 * k)) {
+        for (int i = 0; i &lt; s.size(); i += (2 * k)) {
             // 1. 每隔 2k 个字符的前 k 个字符进行反转
             // 2. 剩余字符小于 2k 但大于或等于 k 个，则反转前 k 个字符
-            if (i + k <= s.size()) {
+            if (i + k &lt;= s.size()) {
                 reverse(s, i, i + k - 1);
                 continue;
             }
@@ -852,22 +839,21 @@ public:
         }
         return s;
     }
-};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="剑指-Offer-05-替换空格"><a href="#剑指-Offer-05-替换空格" class="headerlink" title="剑指 Offer 05. 替换空格"></a><a href="https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/" target="_blank" rel="noopener">剑指 Offer 05. 替换空格</a></h3><p> 请实现一个函数，把字符串 <code>s</code> 中的每个空格替换成”%20”。 </p>
-<h4 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-c++"><code class="language-c++">class Solution {
+};</code></pre><h3 id="剑指-Offer-05-替换空格"><a href="#剑指-Offer-05-替换空格" class="headerlink" title="剑指 Offer 05. 替换空格"></a><a href="https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/" target="_blank" rel="noopener">剑指 Offer 05. 替换空格</a></h3><p> 请实现一个函数，把字符串 <code>s</code> 中的每个空格替换成”%20”。 </p>
+<h4 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h4><pre><code>class Solution {
 public:
     string replaceSpace(string s) {
         //先计算有多少个空格
         int length=s.length();
         int num=0;
         string res;
-        for(int i=0;i<length;i++)
+        for(int i=0;i&lt;length;i++)
         {
-            if(s[i]==' ')
+            if(s[i]==&#39; &#39;)
             {
-                 res.push_back('%');
-                res.push_back('2');
-                 res.push_back('0');
+                 res.push_back(&#39;%&#39;);
+                res.push_back(&#39;2&#39;);
+                 res.push_back(&#39;0&#39;);
             }
             else 
             res.push_back(s[i]);
@@ -875,99 +861,96 @@ public:
         return res;
 
     }
-};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="双指针法-之后自己写一下"><a href="#双指针法-之后自己写一下" class="headerlink" title="双指针法(之后自己写一下)"></a><strong>双指针法</strong>(之后自己写一下)</h4><p>从后往前 代码随想录</p>
-<pre class="line-numbers language-c++"><code class="language-c++">class Solution {
+};</code></pre><h4 id="双指针法-之后自己写一下"><a href="#双指针法-之后自己写一下" class="headerlink" title="双指针法(之后自己写一下)"></a><strong>双指针法</strong>(之后自己写一下)</h4><p>从后往前 代码随想录</p>
+<pre><code>class Solution {
 public:
     string replaceSpace(string s) {
         int count = 0; // 统计空格的个数
         int sOldSize = s.size();
-        for (int i = 0; i < s.size(); i++) {
-            if (s[i] == ' ') {
+        for (int i = 0; i &lt; s.size(); i++) {
+            if (s[i] == &#39; &#39;) {
                 count++;
             }
         }
-        // 扩充字符串s的大小，也就是每个空格替换成"%20"之后的大小
+        // 扩充字符串s的大小，也就是每个空格替换成&quot;%20&quot;之后的大小
         s.resize(s.size() + count * 2);
         int sNewSize = s.size();
-        // 从后先前将空格替换为"%20"
-        for (int i = sNewSize - 1, j = sOldSize - 1; j < i; i--, j--) {
-            if (s[j] != ' ') {
+        // 从后先前将空格替换为&quot;%20&quot;
+        for (int i = sNewSize - 1, j = sOldSize - 1; j &lt; i; i--, j--) {
+            if (s[j] != &#39; &#39;) {
                 s[i] = s[j];
             } else {
-                s[i] = '0';
-                s[i - 1] = '2';
-                s[i - 2] = '%';
+                s[i] = &#39;0&#39;;
+                s[i - 1] = &#39;2&#39;;
+                s[i - 2] = &#39;%&#39;;
                 i -= 2;
             }
         }
         return s;
     }
-};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="151-翻转字符串里的单词"><a href="#151-翻转字符串里的单词" class="headerlink" title="151. 翻转字符串里的单词"></a><a href="https://leetcode-cn.com/problems/reverse-words-in-a-string/" target="_blank" rel="noopener">151. 翻转字符串里的单词</a></h3><p>给你一个字符串 s ，逐个翻转字符串中的所有 单词 。</p>
+};</code></pre><h3 id="151-翻转字符串里的单词"><a href="#151-翻转字符串里的单词" class="headerlink" title="151. 翻转字符串里的单词"></a><a href="https://leetcode-cn.com/problems/reverse-words-in-a-string/" target="_blank" rel="noopener">151. 翻转字符串里的单词</a></h3><p>给你一个字符串 s ，逐个翻转字符串中的所有 单词 。</p>
 <p>单词 是由非空格字符组成的字符串。s 中使用至少一个空格将字符串中的 单词 分隔开。</p>
 <p>请你返回一个翻转 s 中单词顺序并用单个空格相连的字符串。</p>
 <p>说明：</p>
 <p>输入字符串 s 可以在前面、后面或者单词间包含多余的空格。<br>翻转后单词间应当仅用一个空格分隔。<br>翻转后的字符串中不应包含额外的空格。</p>
-<p>![1643517247673](C:\Users\DELL\Desktop\LeetCode\字符串 哈希表.assets\1643517247673.png)</p>
+<p><img src="https://lzjtypora.oss-cn-beijing.aliyuncs.com/imgtypora/202202251510798.png" alt="1643517247673"></p>
 <h4 id="低效思路"><a href="#低效思路" class="headerlink" title="低效思路"></a>低效思路</h4><p>开容器：建立一个vector<string> strl;先存储单词进去，然后再逆序输出并增加’ ‘(空格)，不时间复杂度O（2n） 空间复杂度O（n），其实还是比较高了，方法比较简陋。</string></p>
 <p>感觉应该可以用双指针去做，这样的话应该<strong>空间复杂度只要O（1）</strong></p>
-<pre class="line-numbers language-c++"><code class="language-c++">class Solution {
+<pre><code>class Solution {
 public:
     string reverseWords(string s) {
-        vector<string> str;
+        vector&lt;string&gt; str;
         string res;
         int num=0;
-        s=' '+s; //第一个做特殊处理，直接前面加个空格
+        s=&#39; &#39;+s; //第一个做特殊处理，直接前面加个空格
         //将单词都存储到vector中
-        for(int i=1;i<s.size();i++)
+        for(int i=1;i&lt;s.size();i++)
         {
-            if(s[i]==' ')
+            if(s[i]==&#39; &#39;)
             continue;
-            if(s[i-1]==' ')//前面一个有空格,且自己不是空格，说明这是一个新单词
+            if(s[i-1]==&#39; &#39;)//前面一个有空格,且自己不是空格，说明这是一个新单词
                     {
-                        str.push_back("");
+                        str.push_back(&quot;&quot;);
                         num++;
                     }
             str[num-1]+=s[i];
         }
 
         //翻转
-        for(int i=str.size()-1;i>0;i--)
+        for(int i=str.size()-1;i&gt;0;i--)
         {
-            res=res+str[i]+' ';
+            res=res+str[i]+&#39; &#39;;
         }            
         res=res+str[0];
 
         return res;
 
     }
-};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="高效翻转"><a href="#高效翻转" class="headerlink" title="高效翻转"></a>高效翻转</h4><p> 1，消除多余空格（前面的空格、中间多余的空格、后面的空格）。 </p>
+};</code></pre><h4 id="高效翻转"><a href="#高效翻转" class="headerlink" title="高效翻转"></a>高效翻转</h4><p> 1，消除多余空格（前面的空格、中间多余的空格、后面的空格）。 </p>
 <p>2，将整个字符串翻转，reverse</p>
 <p>3，<strong>依次将单词翻转，这个是最关键的</strong></p>
 <blockquote>
 <p>前面很多大佬都总结了，无非只有三步：</p>
 <p>消除多余空格（前面的空格、中间多余的空格、后面的空格）。<br>本题解使用快慢指针，也可以使用erase，快慢指针的思路是参@carlsun-2<br>快慢指针的具体解释：fast用于向前遍历字符串，slow用于记录我们最终想要的字符串。依次去除前面的空格、中间多余的空格、后面的空格。去除中间多余空格的代码让最后只有两种情况：最后一个字符是空格（倒数第二个字符不是空格）和最后一个字符也不是空格。据此写出消除末尾空格的代码。<br>将整个字符串翻转。本题解写了一个翻转函数，也可以用reverse<br>利用首尾指针<br>依次将每个单词翻转。<br>用i去遍历字符串，当遇到空格时，说明前面是一个单词，将前面的单词翻转。<br>i到末尾时没有空格，但是最后一个单词还没有被翻转，所以翻转一下最后一个单词</p>
 </blockquote>
-<pre class="line-numbers language-c++"><code class="language-c++">class Solution {
+<pre><code>class Solution {
 public:
     //反转字符串
-    void reverse(string& s,int start,int end){
-        while(start<end){
+    void reverse(string&amp; s,int start,int end){
+        while(start&lt;end){
             swap(s[start++],s[end--]);
         }
     }
     //移除多余空格，利用快慢指针
-    void removeExtraSpaces(string&s){
+    void removeExtraSpaces(string&amp;s){
         int slow=0,fast=0;
         //移除开始位置的空格
-        while(s[fast]==' '){
+        while(s[fast]==&#39; &#39;){
             fast++;
         }
         //移除中间位置多余的空格
-        while(fast<s.size()){
-            if(fast>0 && s[fast]==' ' &&s[fast-1]==' '){
+        while(fast&lt;s.size()){
+            if(fast&gt;0 &amp;&amp; s[fast]==&#39; &#39; &amp;&amp;s[fast-1]==&#39; &#39;){
                 fast++;
             }
             else{
@@ -977,7 +960,7 @@ public:
             }
         }
         //如果末尾仅有一个空格，则上述无法将该空格移除；如果末尾有很多空格，则上述将保留一个空格，也不符合要求；所以最终可能的情况有二：末尾有一个空格/末尾无空格 
-        if(slow-1>0 && s[slow-1]==' '){
+        if(slow-1&gt;0 &amp;&amp; s[slow-1]==&#39; &#39;){
             slow--;
         }
         s.resize(slow);
@@ -991,8 +974,8 @@ public:
         reverse(s,0,s.size()-1);
         //step3.依次反转每个单词
         int start=0;
-        for(int i=0;i<s.size();i++){
-            if(s[i]==' '){
+        for(int i=0;i&lt;s.size();i++){
+            if(s[i]==&#39; &#39;){
                 reverse(s,start,i-1);
                 start=i+1;
             }
@@ -1010,8 +993,90 @@ public:
 作者：xiao-bo-bian-huan
 链接：https://leetcode-cn.com/problems/reverse-words-in-a-string/solution/kong-jian-fu-za-du-o1-c-zhu-shi-xiang-xi-biaw/
 来源：力扣（LeetCode）
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</code></pre><h3 id="剑指-Offer-58-II-左旋转字符串"><a href="#剑指-Offer-58-II-左旋转字符串" class="headerlink" title="剑指 Offer 58 - II. 左旋转字符串"></a><a href="https://leetcode-cn.com/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/" target="_blank" rel="noopener">剑指 Offer 58 - II. 左旋转字符串</a></h3><p>字符串的左旋转操作是把字符串前面的若干个字符转移到字符串的尾部。请定义一个函数实现字符串左旋转操作的功能。比如，输入字符串”abcdefg”和数字2，该函数将返回左旋转两位得到的结果”cdefgab”。</p>
+<h4 id="思路-7"><a href="#思路-7" class="headerlink" title="思路"></a>思路</h4><ol>
+<li>反转区间为前n的子串</li>
+<li>反转区间为n到末尾的子串</li>
+<li>反转整个字符串</li>
+</ol>
+<h4 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h4><pre><code>class Solution {
+public:
+    string reverseLeftWords(string s, int n) {
+        reverse(s.begin(),s.begin()+n);//如果n=2，那么表示的是前面两个 而不是前面三个
+        reverse(s.begin()+n,s.end());//这个表示的是第三个开始，要注意一下
+        reverse(s.begin(),s.end());
+        return s;
+    }
+};</code></pre><h3 id="28-实现-strStr-KMP"><a href="#28-实现-strStr-KMP" class="headerlink" title="28. 实现 strStr() KMP"></a><strong><a href="https://leetcode-cn.com/problems/implement-strstr/" target="_blank" rel="noopener">28. 实现 strStr()</a> KMP</strong></h3><p>给你两个字符串 haystack 和 needle ，请你在 haystack 字符串中找出 needle 字符串出现的第一个位置（下标从 0 开始）。如果不存在，则返回  -1 。</p>
+<p><strong>现在还掌握不是很好，之后有时间再好好学学</strong></p>
+<p>主要用于字符串匹配的相关问题</p>
+<h4 id="KMP"><a href="#KMP" class="headerlink" title="KMP"></a>KMP</h4><pre><code>class Solution {
+public:
+    void getNext(int* next, const string&amp; s) {
+        int j = -1;
+        next[0] = j;
+        for(int i = 1; i &lt; s.size(); i++) { // 注意i从1开始
+            while (j &gt;= 0 &amp;&amp; s[i] != s[j + 1]) { // 前后缀不相同了
+                j = next[j]; // 向前回退
+            }
+            if (s[i] == s[j + 1]) { // 找到相同的前后缀
+                j++;
+            }
+            next[i] = j; // 将j（前缀的长度）赋给next[i]
+        }
+    }
+    int strStr(string haystack, string needle) {
+        if (needle.size() == 0) {
+            return 0;
+        }
+        int next[needle.size()];
+        getNext(next, needle);
+        int j = -1; // // 因为next数组里记录的起始位置为-1
+        for (int i = 0; i &lt; haystack.size(); i++) { // 注意i就从0开始
+            while(j &gt;= 0 &amp;&amp; haystack[i] != needle[j + 1]) { // 不匹配
+                j = next[j]; // j 寻找之前匹配的位置
+            }
+            if (haystack[i] == needle[j + 1]) { // 匹配，j和i同时向后移动
+                j++; // i的增加在for循环里
+            }
+            if (j == (needle.size() - 1) ) { // 文本串s里出现了模式串t
+                return (i - needle.size() + 1);
+            }
+        }
+        return -1;
+    }
+};
+</code></pre><h3 id="459-重复的子字符串"><a href="#459-重复的子字符串" class="headerlink" title="459. 重复的子字符串"></a><a href="https://leetcode-cn.com/problems/repeated-substring-pattern/" target="_blank" rel="noopener">459. 重复的子字符串</a></h3><p> 给定一个非空的字符串 <code>s</code> ，检查是否可以通过由它的一个子串重复多次构成。 </p>
+<h4 id="思路-8"><a href="#思路-8" class="headerlink" title="思路"></a>思路</h4><p><strong>数组长度减去最长相同前后缀的长度相当于是第一个周期的长度，也就是一个周期的长度，如果这个周期可以被整除，就说明整个数组就是这个周期的循环。</strong></p>
+<p><strong>强烈建议大家把next数组打印出来，看看next数组里的规律，有助于理解KMP算法</strong></p>
+<h4 id="KMP-1"><a href="#KMP-1" class="headerlink" title="KMP"></a>KMP</h4><pre><code>class Solution {
+public:
+    void getNext (int* next, const string&amp; s){
+        next[0] = -1;
+        int j = -1;
+        for(int i = 1;i &lt; s.size(); i++){
+            while(j &gt;= 0 &amp;&amp; s[i] != s[j+1]) {
+                j = next[j];
+            }
+            if(s[i] == s[j+1]) {
+                j++;
+            }
+            next[i] = j;
+        }
+    }
+    bool repeatedSubstringPattern (string s) {
+        if (s.size() == 0) {
+            return false;
+        }
+        int next[s.size()];
+        getNext(next, s);
+        int len = s.size();
+        if (next[len - 1] != -1 &amp;&amp; len % (len - (next[len - 1] + 1)) == 0) {
+            return true;
+        }
+        return false;
+    }
+};</code></pre>
             </div>
             <hr />
 
@@ -1375,29 +1440,25 @@ public:
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/02/23/c-ji-chu/">
+                <a href="/2021/02/23/shu-zu-ru-men/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="cpp基础">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="数组入门">
                         
-                        <span class="card-title">cpp基础</span>
+                        <span class="card-title">数组入门</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            cpp基础基本语法#include&lt;iostream>
-using namespace std;
-int main(){
-    int n;
-    cin >> n;
-    cout &lt;&lt;"hello world" 
+                            Leetcode写在前面的一些话：把自己当做是一个什么都不懂的小孩，然后从零开始学起。每天保持一定的代码量，并且及时地去总结和复盘。这才是或者说这就是自己应该要做的事情。
+基本刷题思路刷题顺序： 推荐刷题顺序： 数组 -&gt;字符串 -&
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-02-23
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-02-23
                         </span>
                         <span class="publish-author">
                             
@@ -1409,10 +1470,6 @@ int main(){
                     
                     <a href="/tags/LeetCode/" target="_blank">
                         <span class="chip bg-color">LeetCode</span>
-                    </a>
-                    
-                    <a href="/tags/cpp/" target="_blank">
-                        <span class="chip bg-color">cpp</span>
                     </a>
                     
                 </div>
@@ -1426,27 +1483,36 @@ int main(){
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/02/23/shu-zu-ru-men/">
+                <a href="/2020/01/14/2021-11-29-ji-wang-gong-shi-zong-jie-144013/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="数组入门">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="计网公式总结">
                         
-                        <span class="card-title">数组入门</span>
+                        <span class="card-title">计网公式总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Leetcode写在前面的一些话：把自己当做是一个什么都不懂的小孩，然后从零开始学起。每天保持一定的代码量，并且及时地去总结和复盘。这才是或者说这就是自己应该要做的事情。
-基本刷题思路刷题顺序： 推荐刷题顺序： 数组 -&gt;字符串 -&
+                            奈奎斯特定理$$理想低通道下的极限数据传输率=2W\log_2V$$
+香农定理$$信道的极限数据传输率=Wlog_2(1+S/N) (单位为b/s)$$
+W：信道的带宽。 S：信道所传输信号的平均功率。 S/N：信噪比 
+信噪比=10log
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-02-23
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-01-14
                             </span>
                         <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/笔记/" class="post-category" target="_blank">
+                                    笔记
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -1454,8 +1520,12 @@ int main(){
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/LeetCode/" target="_blank">
-                        <span class="chip bg-color">LeetCode</span>
+                    <a href="/tags/408/" target="_blank">
+                        <span class="chip bg-color">408</span>
+                    </a>
+                    
+                    <a href="/tags/计网/" target="_blank">
+                        <span class="chip bg-color">计网</span>
                     </a>
                     
                 </div>
@@ -1610,7 +1680,7 @@ int main(){
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">27.3k</span>
+            <span class="white-color">46.2k</span>
             
 
             <br>
